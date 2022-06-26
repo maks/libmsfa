@@ -54,7 +54,7 @@ target_link_libraries(
 )
 
 # add the executable
-add_executable(test src/main.cc)
+add_executable(tester src/tester.cc)
 
 # now link the test executable with the share lib
-target_link_libraries(test testhelper msfa)
+target_link_libraries(tester testhelper msfa)
