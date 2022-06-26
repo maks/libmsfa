@@ -34,13 +34,19 @@ add_library(
     src/ringbuffer.cc
     src/sawtooth.cc
     src/sin.cc
-    src/synth_unit.cc
+    src/synth_unit.cc   
+)
+
+add_library(
+    # only used by the test runner executable
+    testhelper
+
     src/wavout.cc
 )
 
 target_compile_options(msfa PRIVATE -Wno-c++11-narrowing)
 
-include_directories("include" "src")
+include_directories("include")
 
 target_link_libraries(
     # Specifies the target library.
@@ -51,4 +57,4 @@ target_link_libraries(
 add_executable(test src/main.cc)
 
 # now link the test executable with the share lib
-target_link_libraries(test msfa)
+target_link_libraries(test testhelper msfa)
