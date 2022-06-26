@@ -28,6 +28,7 @@ add_library(
     src/freqlut.cc
     src/lfo.cc
     src/log2.cc
+    src/libmsfa.cc
     src/patch.cc
     src/pitchenv.cc
     src/resofilter.cc
@@ -60,7 +61,7 @@ add_executable(tester src/tester.cc)
 target_link_libraries(tester testhelper msfa)
 
 # add the executable
-add_executable(sample src/main.cc)
+add_executable(example src/example.cc)
 
-# now link the sample executable with the share lib
-target_link_libraries(sample msfa)
+# now link the example executable with the share lib
+target_link_libraries(example msfa)
