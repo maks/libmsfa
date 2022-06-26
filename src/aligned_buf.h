@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-#include <stdint.h>
-#include <cstddef>
-
 // A convenient wrapper for buffers with alignment constraints
 
 // Note that if we were on C++11, we'd use aligned_storage or somesuch.
 
 #ifndef __ALIGNED_BUF_H
 #define __ALIGNED_BUF_H
+
+#include <stdint.h>
+#include <cstddef>
 
 template<typename T, size_t size, size_t alignment = 16>
 class AlignedBuf {
