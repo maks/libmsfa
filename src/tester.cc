@@ -288,8 +288,8 @@ int main(int argc, char **argv) {
   //int32_t freq = atoi(argv[1]);
   //cout << "Logfreq(" << freq << ") = " << Freqlut::lookup(freq) << endl;
 
-  //mkdx7note(sample_rate);
-  mksaw(sample_rate);
+  mkdx7note(sample_rate);
+  //mksaw(sample_rate);
   //test_ringbuffer();
   test_exp2();
   return 0;
