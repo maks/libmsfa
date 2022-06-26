@@ -14,6 +14,9 @@
  * limitations under the License.
  */
 
+#include <stdint.h>
+#include <cstddef>
+
 // A convenient wrapper for buffers with alignment constraints
 
 // Note that if we were on C++11, we'd use aligned_storage or somesuch.

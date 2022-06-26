@@ -25,7 +25,9 @@
 #include "controllers.h"
 #include "dx7note.h"
 
-using namespace std;
+#ifdef VERBOSE
+using std::cout;
+#endif
 
 int32_t midinote_to_logfreq(int midinote) {
   const int base = 50857777;  // (1 << 24) * (log(440) / log(2) - 69/12)
