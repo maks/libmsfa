@@ -2,7 +2,7 @@
 
 ## Build
 
-Make sure CMake is installed, then:
+Make sure C compiler, Make, CMake is installed (e.g. `sudo apt install build-essential cmake`), then:
 ```
 mkdir build
 cd build
