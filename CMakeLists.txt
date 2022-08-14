@@ -57,11 +57,20 @@ target_link_libraries(
     ${CMAKE_DL_LIBS}
 )
 
-# add the executable
+# testing binary
 add_executable(tester src/tester.cc)
 
 # now link the test executable with the share lib
 target_link_libraries(tester testhelper msfa)
+
+# enable testing functionality
+enable_testing()
+
+# define tests
+add_test(
+  NAME tester
+  COMMAND ../test/test.sh
+)
 
 # add the executable
 add_executable(example src/example.cc)
