@@ -47,11 +47,14 @@ add_library(
 
 target_compile_options(msfa PRIVATE -Wno-c++11-narrowing)
 
+set(CMAKE_CXX_FLAGS -pthread)
+
 include_directories("include")
 
 target_link_libraries(
     # Specifies the target library.
     msfa
+    ${CMAKE_DL_LIBS}
 )
 
 # add the executable
