@@ -11,10 +11,10 @@ typedef enum
     MSFA_AUDIO_START_FAILED = -2,
 } msfa_result;
 
-msfa_result initEngine();
+extern "C" msfa_result initEngine();
 
-void sendMidi(const uint8_t *bytes, int size);
+extern "C" void sendMidi(const uint8_t *bytes, int size);
 
-void shutdownEngine();
+extern "C" void shutdownEngine();
 
 #endif  // __LIBMSFA_H
